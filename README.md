@@ -1,73 +1,275 @@
+# ⚫ Recursion in Tech Interviews 2024: 11 Must-Know Questions & Answers
 
-# 🖲 Recursion Data Structures interview questions for developers in 2021
+**Recursion** is a technique in which a function calls itself, breaking problems down into simpler instances of the same problem. It's fundamental in solving problems like tree traversals and combinatorial tasks. In coding interviews, recursion questions evaluate a candidate's ability to think in terms of **self-referential logic** and their grasp on **base cases** and **recursive steps**.
 
-In computer science, recursion is a method of solving a problem where the solution depends on solutions to smaller instances of the same problem.  Follow along and check our list of essential Recursion interview questions and answers that will trend on data structures interviews in 2021.
+Check out our carefully selected list of **basic** and **advanced** Recursion questions and answers to be well-prepared for your tech interviews in 2024.
 
-</br>
+![Recursion Decorative Image](https://storage.googleapis.com/dev-stack-app.appspot.com/blogImg/recursion.png?GoogleAccessId=firebase-adminsdk-bgeaf%40dev-stack-app.iam.gserviceaccount.com&Expires=1698606465&Signature=FbapYVaKQLw7KDR2pDx3tmwjDzyPXgjrMNASbP5KpKGWTTbYYwk778N1gaqaEQrtYc5%2BfpVvrhUysbUJBNOAf0yibtRcG9LHg62YOkTV%2F9BBYkIBv1YwzRUB%2BlC6q81arvaoOutWn%2FV9sUFqkKLQxiDj8jUyuI3%2B6j9trmzW4U4PT8RP4Mh7sr%2FqiDbD1KwIuwR5TZbRWDTQr3ck1dMPDAQ6sH4HkTvb7L8v8eL6HAj15vfpAdl%2FElN5lsqoNTr4sMyEZI%2FvdmxnyZJTduKUPPEZX5jE6S7lhGZtTVcx7w5odBKIx4UCgrxbOT4TcfyW%2BPAJRmBBbsKQUpsR5Ic9cw%3D%3D)
 
-<p align="center">
-  <a href="https://devinterview.io/">
-  <img src="https://source.unsplash.com/collection/52661698/600x300">
-  </a>
-</p>
+👉🏼 You can also find all answers here: [Devinterview.io - Recursion](https://devinterview.io/data/recursion-interview-questions)
 
-</br>
+---
 
-> You can also find all answers here 👉🏼 https://devinterview.io/data/recursion-interview-questions
+## 🔹 1. What are some _Common Examples_ of _Recursion_ in computer science?
 
-</br>
+### Answer
 
-<div data-v-4865b274="" data-v-43a77f0d=""><div data-v-4865b274=""><h2 data-v-4865b274="">🔹 1. How Dynamic Programming is different from Recursion and Memoization?</h2></div> <div data-v-4865b274=""><h3 data-v-4865b274="">Answer:</h3> <div data-v-4865b274=""><div><div><div class="AnswerBody"><ul><li><strong>Memoization</strong> is when you store previous results of a function call (a real function always returns the same thing, given the same inputs). It doesn't make a difference for algorithmic complexity before the results are stored.</li><li><strong>Recursion</strong> is the method of a function calling itself, usually with a smaller dataset. Since most recursive functions can be converted to similar iterative functions, this doesn't make a difference for algorithmic complexity either.</li><li><strong>Dynamic programming</strong> is the process of solving easier-to-solve sub-problems and building up the answer from that. Most DP algorithms will be in the running times between a Greedy algorithm (if one exists) and an exponential (enumerate all possibilities and find the best one) algorithm.<ul><li>DP algorithms could be implemented with recursion, but they don't have to be.</li><li>DP algorithms can't be sped up by memoization, since each sub-problem is only ever solved (or the "solve" function called) once.</li></ul></li></ul></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/1065433/what-is-dynamic-programming" rel="noreferrer" target="_blank" title="How Dynamic Programming is different from Recursion and Memoization? Interview Questions Source To Answer">stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br data-v-4865b274=""><br data-v-4865b274=""></div><div data-v-4865b274="" data-v-43a77f0d=""><div data-v-4865b274=""><h2 data-v-4865b274="">🔹 2. What is a good example of Recursion (other than generating a Fibonacci sequence)?</h2></div> <div data-v-4865b274=""><h3 data-v-4865b274="">Answer:</h3> <div data-v-4865b274=""><div><div><div class="AnswerBody"><p>There are some:</p><ul><li>The binary tree search</li><li>Check for a palyndrome</li><li>Finding factorial</li><li>Traversing the folder hierarchy of a directory tree as part of a file system</li><li>Towers of Hanoi</li><li>Merge sort </li><li>Catalan numbers</li></ul></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/4945128/what-is-a-good-example-of-recursion-other-than-generating-a-fibonacci-sequence" rel="noreferrer" target="_blank" title="What is a good example of Recursion (other than generating a Fibonacci sequence)? Interview Questions Source To Answer">stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br data-v-4865b274=""><br data-v-4865b274=""></div><div data-v-4865b274="" data-v-43a77f0d=""><div data-v-4865b274=""><h2 data-v-4865b274="">🔹 3. What is the difference between Backtracking and Recursion?</h2></div> <div data-v-4865b274=""><h3 data-v-4865b274="">Answer:</h3> <div data-v-4865b274=""><div><div><div class="AnswerBody"><ul><li><strong>Recursion</strong> describes the calling of the <em>same function</em> that you are in. The typical example of a recursive function is the factorial. You always need a condition that makes recursion stop (base case). </li><li><strong>Backtracking</strong> is when the algorithm makes an opportunistic decision<sup>*</sup>, which may come up to be wrong. If the decision was wrong then the backtracking algorithm restores the state before the decision. It builds candidates for the solution and abandons those which cannot fulfill the conditions. A typical example for a task to solve would be the <em>Eight Queens Puzzle</em>. Backtracking is also commonly used within <em>Neuronal Networks</em>. Many times backtracking is not implemented recursively. If backtracking uses recursion its called <strong>Recursive Backtracking</strong></li></ul><p>P.S. <sup>*</sup> <strong>Opportunistic decision</strong> making refers to a process where a person or group assesses alternative actions made possible by the favorable convergence of immediate circumstances recognized <strong>without</strong> reference to any <strong>general plan</strong>.</p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://www.quora.com/What-is-the-difference-between-backtracking-and-recursion-What-are-some-examples" rel="noreferrer" target="_blank" title="What is the difference between Backtracking and Recursion? Interview Questions Source To Answer">www.quora.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br data-v-4865b274=""><br data-v-4865b274=""></div><div data-v-4865b274="" data-v-43a77f0d=""><div data-v-4865b274=""><h2 data-v-4865b274="">🔹 4. Can you convert this Recursion function into a loop?</h2></div> <div data-v-4865b274=""><h3 data-v-4865b274="">Answer:</h3> <div data-v-4865b274=""><div><div class="mb-2"><span class="h5">Problem</span></div><div><div class="AnswerBody"><p>Can you convert this recursion function into a loop?</p><pre><code><span class="token cMod">A</span><span class="token cBase">(</span><span class="token parameter">x</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-  <span class="token cVar">if</span> x<span class="token cBase">&lt;</span><span class="token cNum">0</span> <span class="token cVar">return</span> <span class="token cNum">0</span><span class="token cBase">;</span>
-  <span class="token cVar">return</span> <span class="token cMod">something</span><span class="token cBase">(</span>x<span class="token cBase">)</span> <span class="token cBase">+</span> <span class="token cMod">A</span><span class="token cBase">(</span>x<span class="token cBase">-</span><span class="token cNum">1</span><span class="token cBase">)</span>
-<span class="token cBase">}</span></code></pre></div></div><div><div class="AnswerBody"><p>Any recursive function can be made to iterate (into a loop) but you need to use a stack yourself to keep the state.</p><pre><code><span class="token cMod">A</span><span class="token cBase">(</span><span class="token parameter">x</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-  temp <span class="token cBase">=</span> <span class="token cNum">0</span><span class="token cBase">;</span>
-  <span class="token cVar">for</span> i <span class="token cVar">in</span> <span class="token cNum">0.</span><span class="token cBase">.</span>x <span class="token cBase">{</span>
-    temp <span class="token cBase">=</span> temp <span class="token cBase">+</span> <span class="token cMod">something</span><span class="token cBase">(</span>i<span class="token cBase">)</span><span class="token cBase">;</span>
-  <span class="token cBase">}</span>
-  <span class="token cVar">return</span> temp<span class="token cBase">;</span>
-<span class="token cBase">}</span></code></pre></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/531668/which-recursive-functions-cannot-be-rewritten-using-loops" rel="noreferrer" target="_blank" title="Can you convert this Recursion function into a loop? Interview Questions Source To Answer">stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br data-v-4865b274=""><br data-v-4865b274=""></div><div data-v-4865b274="" data-v-43a77f0d=""><div data-v-4865b274=""><h2 data-v-4865b274="">🔹 5. Explain what is DFS (Depth First Search) algorithm for a Graph and how does it work?</h2></div> <div data-v-4865b274=""><h3 data-v-4865b274="">Answer:</h3> <div data-v-4865b274=""><div><div><div class="AnswerBody"><p><strong>Depth First Traversal</strong> or <strong>Depth First Search</strong> is a <strong>edge based</strong> <em>recursive</em> algorithm for traversing (visiting) all the vertices of a graph or tree data structure using a <strong>stack</strong>. The purpose of the algorithm is to mark each vertex as visited while <em>avoiding</em> cycles. DFS traverse/visit each vertex exactly once and each edge is inspected exactly twice. DFS is a genuinely recursive algorithm that uses stack for <em>backtracking</em> purposes, not for storing the vertex discovery "front" (as is the case in BFS).</p><p>The <strong>DFS</strong> algorithm works as follows:</p><ul><li>Start by putting any one of the graph's vertices on top of a <strong>stack</strong>.</li><li>Take the top item of the stack and add it to the <strong>visited list</strong>.</li><li>Create a list of that vertex's adjacent nodes. Add the ones which aren't in the visited list to the top of the stack.</li><li>Keep repeating steps 2 and 3 until the stack is empty.</li></ul><p><strong>DFS example step-by-step</strong>:</p><ul><li>Considering A as the starting vertex which is explored and stored in the stack.</li><li>B successor vertex of A is stored in the stack.</li><li>Vertex B have two successors E and F, among them alphabetically E is explored first and stored in the stack.</li><li>The successor of vertex E, i.e., G is stored in the stack.</li><li>Vertex G have two connected vertices, and both are already visited, so G is popped out from the stack.</li><li>Similarly, E s also removed.</li><li>Now, vertex B is at the top of the stack, its another node(vertex) F is explored and stored in the stack.</li><li>Vertex F has two successor C and D, between them C is traversed first and stored in the stack.</li><li>Vertex C only have one predecessor which is already visited, so it is removed from the stack.</li><li>Now vertex D connected to F is visited and stored in the stack.</li><li>As vertex D doesn’t have any unvisited nodes, therefore D is removed.</li><li>Similarly, F, B and A are also popped.</li><li>The generated output is – A, B, E, G, F, C, D.</li></ul><p></p><div><div><div><div></div></div></div></div><p></p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://techdifferences.com/difference-between-bfs-and-dfs.html" rel="noreferrer" target="_blank" title="Explain what is DFS (Depth First Search) algorithm for a Graph and how does it work? Interview Questions Source To Answer">techdifferences.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br data-v-4865b274=""><br data-v-4865b274=""></div><div data-v-4865b274="" data-v-43a77f0d=""><div data-v-4865b274=""><h2 data-v-4865b274="">🔹 6. Convert a Binary Tree to a Doubly Linked List</h2></div> <div data-v-4865b274=""><h3 data-v-4865b274="">Answer:</h3> <div data-v-4865b274=""><div><div><div class="AnswerBody"><p>This can be achieved by traversing the tree in the <strong>in-order</strong> manner that is, left the <code>child -&gt; root -&gt;right</code> node. </p><p></p><div><div><div><div></div></div></div></div><p></p><p>In an in-order traversal, first the left sub-tree is traversed, then the root is visited, and finally the right sub-tree is traversed.</p><p>One simple way of solving this problem is to start with an empty doubly linked list. While doing the in-order traversal of the binary tree, keep inserting each element output into the doubly linked list. But, if we look at the question carefully, the interviewer wants us to convert the binary tree to a doubly linked list <strong>in-place</strong> i.e. we should not create new nodes for the doubly linked list.</p><p>This problem can be solved recursively using a divide and conquer approach. Below is the algorithm specified.</p><ul><li>Start with the root node and solve left and right sub-trees recursively</li><li>At each step, once left and right sub-trees have been processed:<ul><li>fuse output of left subtree with root to make the intermediate result</li><li>fuse intermediate result (built in the previous step) with output from the right sub-tree to make the final result of the current recursive call</li></ul></li></ul></div></div><div><div class="mb-2 mt-2"><span class="h5">Complexity Analysis</span></div><div class="hide-small"><div class="row no-gutters my-2 align-items-end"><div class="col font-weight-bold text-muted">Time:</div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Constant</div><div class="complexity amazing first p-1 justify-content-center shadow-text">O(1)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Dbl. Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log log n)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Square Root</div><div class="complexity fair p-1 justify-content-center shadow-text ">O(√n)</div></div><div class="col text-center"><div class="font-weight-bold  text-muted justify-content-center">Linear</div><div class="complexity fair p-1 justify-content-center shadow-text selected-complexity effect7">O(n)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted justify-content-center">Linearithmic</div><div class="complexity bad p-1 justify-content-center shadow-text ">O(n log n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Quadratic</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>n</i><sup>2</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold   text-muted justify-content-center">Exponential</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>2</i><sup>n</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted">Factorial</div><div class="complexity terrible last p-1 justify-content-center shadow-text ">O(n!)</div></div></div></div><div class="hide-small"><div class="row no-gutters my-2 align-items-end"><div class="col font-weight-bold text-muted">Space:</div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Constant</div><div class="complexity amazing first p-1 justify-content-center shadow-text">O(1)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Dbl. Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log log n)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Square Root</div><div class="complexity fair p-1 justify-content-center shadow-text ">O(√n)</div></div><div class="col text-center"><div class="font-weight-bold  text-muted justify-content-center">Linear</div><div class="complexity fair p-1 justify-content-center shadow-text selected-complexity effect7">O(n)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted justify-content-center">Linearithmic</div><div class="complexity bad p-1 justify-content-center shadow-text ">O(n log n)</div></div><div class="col disable text-center"><div class="font-weight-bold   text-muted justify-content-center">Quadratic</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>n</i><sup>2</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold   text-muted justify-content-center">Exponential</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>2</i><sup>n</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted">Factorial</div><div class="complexity terrible last p-1 justify-content-center shadow-text ">O(n!)</div></div></div></div><div class="hide-large"><p><b>Time:</b> <mark>O(n)</mark></p><p><b>Space:</b> <mark>O(n)</mark></p></div><div class="mt-3"><div><div class="AnswerBody"><p>Recursive solution has <code><i>O</i>(<i>h</i>)</code> memory complexity as it will consume memory on the stack up to the height of binary tree <code>h</code>. It will be <code><i>O</i>(<i>log n</i>)</code> for balanced tree and in worst case can be <code><i>O</i>(<i>n</i>)</code>.</p></div></div></div></div><div style="font-size: 14px;"><div class="mb-3 mt-2"><span class="h5">Implementation</span></div><div><nav class="mdc-tab-bar"><div class="mdc-tab-scroller"><div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll" style="margin-bottom: 0px;"><div class="mdc-tab-scroller__scroll-content"><button class="mdc-ripple-upgraded mdc-ripple-upgraded--background-focused mdc-tab mdc-tab--min-width mdc-tab--active" aria-selected="true" tabindex="0"><div class="mdc-tab__content"><span class="mdc-tab__text-label"><span>Java</span>&nbsp;<span class="shadow-text lang-badge java">Java</span></span></div><span class="mdc-tab-indicator mdc-tab-indicator--active"><span aria-hidden="true" class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span></span><div class="mdc-tab__ripple mdc-ripple-upgraded mdc-ripple-upgraded--background-focused"></div></button><button class="mdc-ripple-upgraded mdc-tab mdc-tab--min-width"><div class="mdc-tab__content"><span class="mdc-tab__text-label"><span>Python</span>&nbsp;<span class="shadow-text lang-badge py">PY</span></span></div><span class="mdc-tab-indicator"><span aria-hidden="true" class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span></span><div class="mdc-tab__ripple mdc-ripple-upgraded"></div></button></div></div></div></nav></div><div class="mt-2"><div class="AnswerBody"><pre><code><span class="token cVar">public</span> <span class="token cVar">static</span> <span class="token cVar">void</span> <span class="token class-name">BinaryTreeToDLL</span><span class="token cBase">(</span><span class="token class-name">Node</span> root<span class="token cBase">)</span> <span class="token cBase">{</span>
-    <span class="token cVar">if</span> <span class="token cBase">(</span>root <span class="token cBase">==</span> <span class="token cVar">null</span><span class="token cBase">)</span>
-        <span class="token cVar">return</span><span class="token cBase">;</span>
-    <span class="token class-name">BinaryTreeToDLL</span><span class="token cBase">(</span>root<span class="token cBase">.</span>left<span class="token cBase">)</span><span class="token cBase">;</span>
-    <span class="token cVar">if</span> <span class="token cBase">(</span>prev <span class="token cBase">==</span> <span class="token cVar">null</span><span class="token cBase">)</span> <span class="token cBase">{</span> <span class="token cComment">// first node in list</span>
-        head <span class="token cBase">=</span> root<span class="token cBase">;</span>
-    <span class="token cBase">}</span> <span class="token cVar">else</span> <span class="token cBase">{</span>
-        prev<span class="token cBase">.</span>right <span class="token cBase">=</span> root<span class="token cBase">;</span>
-        root<span class="token cBase">.</span>left <span class="token cBase">=</span> prev<span class="token cBase">;</span>
-    <span class="token cBase">}</span>
-    prev <span class="token cBase">=</span> root<span class="token cBase">;</span>
-    <span class="token class-name">BinaryTreeToDLL</span><span class="token cBase">(</span>root<span class="token cBase">.</span>right<span class="token cBase">)</span><span class="token cBase">;</span>
-    <span class="token cVar">if</span> <span class="token cBase">(</span>prev<span class="token cBase">.</span>right <span class="token cBase">==</span> <span class="token cVar">null</span><span class="token cBase">)</span> <span class="token cBase">{</span> <span class="token cComment">// last node in list</span>
-        head<span class="token cBase">.</span>left <span class="token cBase">=</span> prev<span class="token cBase">;</span>
-        prev<span class="token cBase">.</span>right <span class="token cBase">=</span> head<span class="token cBase">;</span>
-    <span class="token cBase">}</span>
-<span class="token cBase">}</span></code></pre></div></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://www.educative.io/m/convert-binary-tree-to-doubly-linked-list" rel="noreferrer" target="_blank" title="Convert a Binary Tree to a Doubly Linked List Interview Questions Source To Answer">www.educative.io</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br data-v-4865b274=""><br data-v-4865b274=""></div><div data-v-4865b274="" data-v-43a77f0d=""><div data-v-4865b274=""><h2 data-v-4865b274="">🔹 7. Is it always possible to write a non-recursive form for every Recursive function?</h2></div> <div data-v-4865b274=""><h3 data-v-4865b274="">Answer:</h3> <div data-v-4865b274=""><div><div><div class="AnswerBody"><p>When you use a function <strong>recursively</strong>, the compiler takes care of stack management for you, which is what makes recursion possible. Anything you can do recursively, you can do by managing a stack yourself (for indirect recursion, you just have to make sure your different functions share that stack).</p><p>A simple formal proof is to show that both <em>µ recursion</em> (general recursive function) and a non-recursive calculus such as GOTO are both <strong>Turing complete</strong>. Since all Turing complete calculi are strictly equivalent in their expressive power, all recursive functions can be implemented by the non-recursive Turing-complete calculus.</p></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/531668/which-recursive-functions-cannot-be-rewritten-using-loops" rel="noreferrer" target="_blank" title="Is it always possible to write a non-recursive form for every Recursive function? Interview Questions Source To Answer">stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br data-v-4865b274=""><br data-v-4865b274=""></div><div data-v-4865b274="" data-v-43a77f0d=""><div data-v-4865b274=""><h2 data-v-4865b274="">🔹 8. How to use Memoization for N-th Fibonacci number?</h2></div> <div data-v-4865b274=""><h3 data-v-4865b274="">Answer:</h3> <div data-v-4865b274=""><div><div class="mb-2"><span class="h5">Problem</span></div><div><div class="AnswerBody"><p>Why? Any problems you may face with that solution?</p></div></div><div><div class="AnswerBody"><p>Yes. It's called <strong>Memoization</strong>. <strong>Memoization</strong> is an optimization technique used primarily to speed up computer programs by <em>storing the results of expensive function calls</em>. </p><p>Let’s look at the diagram that will help you understand what’s going on here with the rest of our code. Function fib is called with argument 5. Can you see that we calculate the <code>fib(2)</code> results 3(!) times?</p><p></p><div><div><div><div></div></div></div></div><p></p><p>Basically, if we just store the value of each index in a <strong>hash</strong>, we will avoid the computational time of that value for the next <code>N</code> times. This change will increase the space complexity of our new algorithm to <code><i>O</i>(<i>n</i>)</code> but will dramatically decrease the time complexity to <code>2N</code> which will resolve to linear time since 2 is a constant <code><i>O</i>(<i>n</i>)</code>.</p><p>There’s just <strong>one problem</strong>: With an infinite series, the memo array will have unbounded growth. Eventually, you’re going to run into heap size limits, and that will crash the JS engine. No worries though. With Fibonacci, you’ll run into the maximum exact JavaScript integer size first, which is <code>9007199254740991</code>. That’s over 9 quadrillion, which is a big number, but Fibonacci isn’t impressed. Fibonacci grows <strong>fast</strong>. You’ll burst that barrier after generating only 79 numbers.</p></div></div><div><div class="mb-2 mt-2"><span class="h5">Complexity Analysis</span></div><div class="hide-small"><div class="row no-gutters my-2 align-items-end"><div class="col font-weight-bold text-muted">Time:</div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Constant</div><div class="complexity amazing first p-1 justify-content-center shadow-text">O(1)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Dbl. Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log log n)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Square Root</div><div class="complexity fair p-1 justify-content-center shadow-text ">O(√n)</div></div><div class="col text-center"><div class="font-weight-bold  text-muted justify-content-center">Linear</div><div class="complexity fair p-1 justify-content-center shadow-text selected-complexity effect7">O(n)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted justify-content-center">Linearithmic</div><div class="complexity bad p-1 justify-content-center shadow-text ">O(n log n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Quadratic</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>n</i><sup>2</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold   text-muted justify-content-center">Exponential</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>2</i><sup>n</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted">Factorial</div><div class="complexity terrible last p-1 justify-content-center shadow-text ">O(n!)</div></div></div></div><div class="hide-small"><div class="row no-gutters my-2 align-items-end"><div class="col font-weight-bold text-muted">Space:</div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Constant</div><div class="complexity amazing first p-1 justify-content-center shadow-text">O(1)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Dbl. Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log log n)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Square Root</div><div class="complexity fair p-1 justify-content-center shadow-text ">O(√n)</div></div><div class="col text-center"><div class="font-weight-bold  text-muted justify-content-center">Linear</div><div class="complexity fair p-1 justify-content-center shadow-text selected-complexity effect7">O(n)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted justify-content-center">Linearithmic</div><div class="complexity bad p-1 justify-content-center shadow-text ">O(n log n)</div></div><div class="col disable text-center"><div class="font-weight-bold   text-muted justify-content-center">Quadratic</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>n</i><sup>2</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold   text-muted justify-content-center">Exponential</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>2</i><sup>n</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted">Factorial</div><div class="complexity terrible last p-1 justify-content-center shadow-text ">O(n!)</div></div></div></div><div class="hide-large"><p><b>Time:</b> <mark>O(n)</mark></p><p><b>Space:</b> <mark>O(n)</mark></p></div><div class="mt-3"></div></div><div style="font-size: 14px;"><div class="mb-3 mt-2"><span class="h5">Implementation</span></div><div><nav class="mdc-tab-bar"><div class="mdc-tab-scroller"><div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll" style="margin-bottom: 0px;"><div class="mdc-tab-scroller__scroll-content"><button class="mdc-ripple-upgraded mdc-ripple-upgraded--background-focused mdc-tab mdc-tab--min-width mdc-tab--active" aria-selected="true" tabindex="0"><div class="mdc-tab__content"><span class="mdc-tab__text-label"><span>JavaScript</span>&nbsp;<span class="shadow-text lang-badge js">JS</span></span></div><span class="mdc-tab-indicator mdc-tab-indicator--active"><span aria-hidden="true" class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span></span><div class="mdc-tab__ripple mdc-ripple-upgraded mdc-ripple-upgraded--background-focused"></div></button><button class="mdc-ripple-upgraded mdc-tab mdc-tab--min-width"><div class="mdc-tab__content"><span class="mdc-tab__text-label"><span>Java</span>&nbsp;<span class="shadow-text lang-badge java">Java</span></span></div><span class="mdc-tab-indicator"><span aria-hidden="true" class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span></span><div class="mdc-tab__ripple mdc-ripple-upgraded"></div></button></div></div></div></nav></div><div class="mt-2"><div class="AnswerBody"><pre><code><span class="token cVar">function</span> <span class="token cMod">fibonacci</span><span class="token cBase">(</span><span class="token parameter">num<span class="token cBase">,</span> memo</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-  memo <span class="token cBase">=</span> memo <span class="token cBase">||</span> <span class="token cBase">{</span><span class="token cBase">}</span><span class="token cBase">;</span>
+Let's look into some examples and see how they utilize the core concepts of **recursion**.
 
-  <span class="token cVar">if</span> <span class="token cBase">(</span>memo<span class="token cBase">[</span>num<span class="token cBase">]</span><span class="token cBase">)</span> <span class="token cVar">return</span> memo<span class="token cBase">[</span>num<span class="token cBase">]</span><span class="token cBase">;</span>
-  <span class="token cVar">if</span> <span class="token cBase">(</span>num <span class="token cBase">&lt;=</span> <span class="token cNum">1</span><span class="token cBase">)</span> <span class="token cVar">return</span> <span class="token cNum">1</span><span class="token cBase">;</span>
+### 1. Binary Tree Traversal
 
-  <span class="token cVar">return</span> memo<span class="token cBase">[</span>num<span class="token cBase">]</span> <span class="token cBase">=</span> <span class="token cMod">fibonacci</span><span class="token cBase">(</span>num <span class="token cBase">-</span> <span class="token cNum">1</span><span class="token cBase">,</span> memo<span class="token cBase">)</span> <span class="token cBase">+</span> <span class="token cMod">fibonacci</span><span class="token cBase">(</span>num <span class="token cBase">-</span> <span class="token cNum">2</span><span class="token cBase">,</span> memo<span class="token cBase">)</span><span class="token cBase">;</span>
-<span class="token cBase">}</span></code></pre></div></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://medium.com/developers-writing/fibonacci-sequence-algorithm-in-javascript-b253dc7e320e" rel="noreferrer" target="_blank" title="How to use Memoization for N-th Fibonacci number?  Interview Questions Source To Answer">medium.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br data-v-4865b274=""><br data-v-4865b274=""></div><div data-v-4865b274="" data-v-43a77f0d=""><div data-v-4865b274=""><h2 data-v-4865b274="">🔹 9. How to recursively reverse a Linked List?</h2></div> <div data-v-4865b274=""><h3 data-v-4865b274="">Answer:</h3> <div data-v-4865b274=""><div><div><div class="AnswerBody"><p>Start from the bottom up by asking and answering tiny questions:</p><ul><li>What is the reverse of <code>null</code> (the empty list)? <code>null</code>.</li><li>What is the reverse of a one element list? the element.</li><li>What is the reverse of an n element list? the reverse of the rest of the list followed by the first element.</li></ul><p><strong>P.S.</strong></p><p>How to understand that part?</p><pre><code>head<span class="token cBase">.</span>next<span class="token cBase">.</span>next <span class="token cBase">=</span> head<span class="token cBase">;</span>
-head<span class="token cBase">.</span>next <span class="token cBase">=</span> <span class="token cVar">null</span><span class="token cBase">;</span></code></pre><p>Think about the origin link list: </p><pre><code>1-&gt;2-&gt;3-&gt;4-&gt;5</code></pre><p>Now assume that the last node has been reversed. Just like this:</p><pre><code>1-&gt;2-&gt;3-&gt;4&lt;-5</code></pre><p>And this time you are at the node 3 , you want to change <code>3-&gt;4</code> to <code>3&lt;-4</code> , means let <code>3-&gt;next-&gt;next</code> = <code>3</code> (as <code>3-&gt;next</code> is <code>4</code> and <code>4-&gt;next</code> = <code>3</code> is to reverse it)</p></div></div><div><div class="mb-2 mt-2"><span class="h5">Complexity Analysis</span></div><div class="hide-small"><div class="row no-gutters my-2 align-items-end"><div class="col font-weight-bold text-muted">Time:</div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Constant</div><div class="complexity amazing first p-1 justify-content-center shadow-text">O(1)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Dbl. Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log log n)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Square Root</div><div class="complexity fair p-1 justify-content-center shadow-text ">O(√n)</div></div><div class="col text-center"><div class="font-weight-bold  text-muted justify-content-center">Linear</div><div class="complexity fair p-1 justify-content-center shadow-text selected-complexity effect7">O(n)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted justify-content-center">Linearithmic</div><div class="complexity bad p-1 justify-content-center shadow-text ">O(n log n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Quadratic</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>n</i><sup>2</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold   text-muted justify-content-center">Exponential</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>2</i><sup>n</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted">Factorial</div><div class="complexity terrible last p-1 justify-content-center shadow-text ">O(n!)</div></div></div></div><div class="hide-small"><div class="row no-gutters my-2 align-items-end"><div class="col font-weight-bold text-muted">Space:</div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Constant</div><div class="complexity amazing first p-1 justify-content-center shadow-text">O(1)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Dbl. Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log log n)</div></div><div class="col disable text-center"><div class="text-muted font-weight-bold justify-content-center">Logarithmic</div><div class="complexity good p-1 justify-content-center shadow-text">O(log n)</div></div><div class="col disable text-center"><div class="font-weight-bold  text-muted justify-content-center">Square Root</div><div class="complexity fair p-1 justify-content-center shadow-text ">O(√n)</div></div><div class="col text-center"><div class="font-weight-bold  text-muted justify-content-center">Linear</div><div class="complexity fair p-1 justify-content-center shadow-text selected-complexity effect7">O(n)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted justify-content-center">Linearithmic</div><div class="complexity bad p-1 justify-content-center shadow-text ">O(n log n)</div></div><div class="col disable text-center"><div class="font-weight-bold   text-muted justify-content-center">Quadratic</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>n</i><sup>2</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold   text-muted justify-content-center">Exponential</div><div class="complexity terrible p-1 justify-content-center shadow-text "><i>O</i>(<i>2</i><sup>n</sup>)</div></div><div class="col disable text-center"><div class="font-weight-bold text-muted">Factorial</div><div class="complexity terrible last p-1 justify-content-center shadow-text ">O(n!)</div></div></div></div><div class="hide-large"><p><b>Time:</b> <mark>O(n)</mark></p><p><b>Space:</b> <mark>O(n)</mark></p></div><div class="mt-3"><div><div class="AnswerBody"><p>Assume that <code>n</code> is the list's length, the time complexity is <code><i>O</i>(<i>n</i>)</code>. The extra space comes from implicit stack space due to recursion. The recursion could go up to <code>n</code> levels deep then space complexity is <code><i>O</i>(<i>n</i>)</code>.</p></div></div></div></div><div style="font-size: 14px;"><div class="mb-3 mt-2"><span class="h5">Implementation</span></div><div><nav class="mdc-tab-bar"><div class="mdc-tab-scroller"><div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll" style="margin-bottom: 0px;"><div class="mdc-tab-scroller__scroll-content"><button class="mdc-ripple-upgraded mdc-ripple-upgraded--background-focused mdc-tab mdc-tab--min-width mdc-tab--active" aria-selected="true" tabindex="0"><div class="mdc-tab__content"><span class="mdc-tab__text-label"><span>JavaScript</span>&nbsp;<span class="shadow-text lang-badge js">JS</span></span></div><span class="mdc-tab-indicator mdc-tab-indicator--active"><span aria-hidden="true" class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span></span><div class="mdc-tab__ripple mdc-ripple-upgraded mdc-ripple-upgraded--background-focused"></div></button><button class="mdc-ripple-upgraded mdc-tab mdc-tab--min-width"><div class="mdc-tab__content"><span class="mdc-tab__text-label"><span>Java</span>&nbsp;<span class="shadow-text lang-badge java">Java</span></span></div><span class="mdc-tab-indicator"><span aria-hidden="true" class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span></span><div class="mdc-tab__ripple mdc-ripple-upgraded"></div></button><button class="mdc-ripple-upgraded mdc-tab mdc-tab--min-width"><div class="mdc-tab__content"><span class="mdc-tab__text-label"><span>Python</span>&nbsp;<span class="shadow-text lang-badge py">PY</span></span></div><span class="mdc-tab-indicator"><span aria-hidden="true" class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span></span><div class="mdc-tab__ripple mdc-ripple-upgraded"></div></button></div></div></div></nav></div><div class="mt-2"><div class="AnswerBody"><pre><code><span class="token cVar">var</span> <span class="token function-variable cMod">reverseList</span> <span class="token cBase">=</span> <span class="token cVar">function</span><span class="token cBase">(</span><span class="token parameter">head</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-    <span class="token cVar">if</span> <span class="token cBase">(</span><span class="token cBase">!</span>head<span class="token cBase">)</span> <span class="token cBase">{</span>
-        <span class="token cVar">return</span> head<span class="token cBase">;</span>
-    <span class="token cBase">}</span>
-    <span class="token cVar">let</span> pre <span class="token cBase">=</span> head<span class="token cBase">.</span>next<span class="token cBase">;</span>
-    head<span class="token cBase">.</span>next <span class="token cBase">=</span> <span class="token cVar">null</span><span class="token cBase">;</span>
-    <span class="token cVar">return</span> <span class="token cMod">fun</span><span class="token cBase">(</span>head<span class="token cBase">,</span> pre<span class="token cBase">)</span><span class="token cBase">;</span>
+In binary tree traversal, nodes are visited **recursively**, exploring the left and right subtrees in various orders.
+
+```python
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
+def in_order_traversal(node):
+    if node is not None:
+        in_order_traversal(node.left)
+        print(node.value)
+        in_order_traversal(node.right)
+```
+
+### 2. Palindrome Check
+
+A **palindrome** is a word, phrase, number, or other sequence of characters that reads the same forward and backward. To determine a palindrome, the outer characters of a word are compared. If they match, the inner substring is checked recursively.
+
+```python
+def is_palindrome(word):
+    if len(word) <= 1:
+        return True
+    if word[0] == word[-1]:
+        return is_palindrome(word[1:-1])
+    return False
+```
+
+### 3. Factorial Calculation
+
+The factorial of a number is calculated using a **base** and **recursive** case. $0! = 1$ and $n! = n \times (n-1)!$.
+
+```python
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n-1)
+```
+
+### 4. Folder Hierarchy
+
+A folder hierarchy in a file system can be traversed recursively, exploring the contents of each directory.
+
+```python
+import os
+
+def folder_contents(path):
+    for item in os.listdir(path):
+        item_path = os.path.join(path, item)
+        if os.path.isfile(item_path):
+            print(f"Found a file: {item_path}")
+        elif os.path.isdir(item_path):
+            print(f"Entering folder: {item_path}")
+            folder_contents(item_path)
+```
+
+### 5. Towers of Hanoi
+
+The Towers of Hanoi is a mathematical puzzle that involves three pegs and a set of disks of different sizes, which can be moved from one peg to another following a set of rules. It's often used as an example in computer science textbooks to illustrate how recursion can be used to solve problems.
+
+```python
+def tower_of_hanoi(n, source, target, auxiliary):
+    if n == 1:
+        print(f"Move disk 1 from {source} to {target}")
+        return
+    tower_of_hanoi(n-1, source, auxiliary, target)
+    print(f"Move disk {n} from {source} to {target}")
+    tower_of_hanoi(n-1, auxiliary, target, source)
+```
+
+### 6. Merge Sort
+
+This sorting algorithm follows the **divide-and-conquer** paradigm, using recursion to split and then merge lists.
+
+```python
+def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    mid = len(arr) // 2
+    left_half = arr[:mid]
+    right_half = arr[mid:]
+    left_half = merge_sort(left_half)
+    right_half = merge_sort(right_half)
+    return merge(left_half, right_half)
+```
+
+### 7. Catalan Numbers
+
+The **Catalan numbers** form a sequence of natural numbers that occur in various counting problems, often involving recursive structures. The recursive formula for the $n$-th Catalan number is 
+
+$$
+C_n = \sum_{i=0}^{n-1} C_i \cdot C_{n-1-i}
+$$
+
+where the base case is $C_0 = 1$.
+
+---
+
+## 🔹 2. What is the difference between _Backtracking_ and _Recursion_?
+
+### Answer
+
+**Backtracking** often employs **recursion** to explore the vast space of possible solutions. However, not all recursive algorithms involve backtracking.
+
+Think of **recursion** as the mechanism that enables a function to call itself, and **backtracking** as a strategy where you make a choice and explore the possibilities.
+
+### Key Concepts
+
+- **Recursion**: Utilizes a divide-and-conquer approach, breaking the main problem into smaller, self-similar subproblems. Recursive calls work towards solving these subproblems, relying on defined base cases for termination.
+
+- **Backtracking**: Operates as an advanced form of recursion by building solutions incrementally. When a partial solution is deemed unsuitable, it "backtracks" to modify previous choices, ensuring an efficient traversal through the solution space.
+
+### Common Applications
+
+#### Recursion
+
+- **Tree Traversals**: Visiting all nodes in a tree, like in binary search trees.
+- **Divide and Conquer Algorithms**: Such as merge sort or quick sort.
+- **Dynamic Programming**: Solving problems like the coin change problem by breaking them down into smaller subproblems.
+
+#### Backtracking
+
+- **Puzzle Solvers**: Solving games like Sudoku or crossword puzzles.
+- **Combinatorial Problems**: Generating all permutations or combinations of a set.
+- **Decision-making Problems**: Such as the knapsack problem, where decisions are made on whether to include items.
+
+---
+
+## 🔹 3. How _Dynamic Programming_ is different from _Recursion_ and _Memoization_?
+
+### Answer
+
+**Dynamic Programming** (DP), **Recursion**, and **Memoization** are techniques for solving problems that can be divided into smaller, overlapping sub-problems. While they share this commonality, they each offer unique advantages and limitations. 
+
+### Key Distinctions
+
+1. **Efficiency**: DP typically leads to polynomial-time algorithms, whereas Recursion and Memoization can result in higher time complexities.
+  
+2. **Problem-Solving Direction**: DP builds solutions from the ground up, focusing on smaller sub-problems first. In contrast, Recursion and Memoization usually adopt a top-down approach.
+
+3. **Implementation Style**: DP and Memoization can be implemented either iteratively or recursively, while Recursion is, by definition, a recursive technique.
+
+4. **Sub-Problem Coverage**: DP aims to solve all relevant sub-problems, whereas Memoization and Recursion solve sub-problems on an as-needed basis.
+
+5. **Memory Use**: DP often requires less memory than Memoization, as it doesn't store every state reached through recursive calls.
+
+---
+
+## 🔹 4. Explain the _Depth-First Search_ algorithm.
+
+### Answer
+
+**Depth-First Search** (DFS) is a graph traversal algorithm that's simpler and **often faster** than its breadth-first counterpart (BFS). While it **might not explore all vertices**, DFS is still fundamental to numerous graph algorithms.
+
+### Algorithm Steps
+
+1. **Initialize**: Select a starting vertex, mark it as visited, and put it on a stack.
+2. **Loop**: Until the stack is empty, do the following:
+   - Remove the top vertex from the stack.
+   - Explore its unvisited neighbors and add them to the stack.
+3. **Finish**: When the stack is empty, the algorithm ends, and all reachable vertices are visited.
+
+### Visual Representation
+
+![DFS Example](https://firebasestorage.googleapis.com/v0/b/dev-stack-app.appspot.com/o/graph-theory%2Fdepth-first-search.jpg?alt=media&token=37b6d8c3-e5e1-4de8-abba-d19e36afc570)
+
+### Code Example: Depth-First Search
+
+Here is the Python code:
+
+```python
+def dfs(graph, start):
+    visited = set()
+    stack = [start]
     
-    <span class="token cVar">function</span> <span class="token cMod">fun</span><span class="token cBase">(</span><span class="token parameter">cur<span class="token cBase">,</span> pre</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-        <span class="token cVar">if</span> <span class="token cBase">(</span>pre <span class="token cBase">==</span> <span class="token cVar">null</span><span class="token cBase">)</span> <span class="token cBase">{</span>
-            <span class="token cVar">return</span> cur<span class="token cBase">;</span>
-        <span class="token cBase">}</span>
-        <span class="token cVar">let</span> tmp <span class="token cBase">=</span> pre<span class="token cBase">.</span>next<span class="token cBase">;</span>
-        pre<span class="token cBase">.</span>next <span class="token cBase">=</span> cur<span class="token cBase">;</span>
-        <span class="token cVar">return</span> <span class="token cMod">fun</span><span class="token cBase">(</span>pre<span class="token cBase">,</span> tmp<span class="token cBase">)</span><span class="token cBase">;</span>
-    <span class="token cBase">}</span>
-<span class="token cBase">}</span></code></pre></div></div></div><div class="row my-2"><div><span><i>Source:</i>&nbsp;<span><a href="https://stackoverflow.com/questions/354875/reversing-a-linked-list-in-java-recursively" rel="noreferrer" target="_blank" title="How to recursively reverse a Linked List? Interview Questions Source To Answer">stackoverflow.com</a></span></span>&nbsp; &nbsp;</div></div></div></div></div> <br data-v-4865b274=""><br data-v-4865b274=""></div></div>
+    while stack:
+        vertex = stack.pop()
+        if vertex not in visited:
+            visited.add(vertex)
+            stack.extend(neighbor for neighbor in graph[vertex] if neighbor not in visited)
+    
+    return visited
 
-<br />
+# Example graph
+graph = {
+    'A': {'B', 'G'},
+    'B': {'A', 'E', 'F'},
+    'G': {'A'},
+    'E': {'B', 'G'},
+    'F': {'B', 'C', 'D'},
+    'C': {'F'},
+    'D': {'F'}
+}
 
-> You can also find more data structures interview questions here 👉🏼 https://devinterview.io/data/
+print(dfs(graph, 'A'))  # Output: {'A', 'B', 'C', 'D', 'E', 'F', 'G'}
+```
+
+---
+## 🔹 5. Is it always possible to write a _Non-Recursive_ form for every _Recursive_ function?
+
+### Answer
+
+👉🏼 Check out all 11 answers here: [Devinterview.io - Recursion](https://devinterview.io/data/recursion-interview-questions)
+
+---
+
+## 🔹 6. Convert the given _Recursive Function_ into an _Iterative Function_.
+
+### Answer
+
+👉🏼 Check out all 11 answers here: [Devinterview.io - Recursion](https://devinterview.io/data/recursion-interview-questions)
+
+---
+
+## 🔹 7. Convert a _Binary Tree_ into a _Doubly Linked List_.
+
+### Answer
+
+👉🏼 Check out all 11 answers here: [Devinterview.io - Recursion](https://devinterview.io/data/recursion-interview-questions)
+
+---
+
+## 🔹 8. _Reverse_ a _Linked List_ recursively.
+
+### Answer
+
+👉🏼 Check out all 11 answers here: [Devinterview.io - Recursion](https://devinterview.io/data/recursion-interview-questions)
+
+---
+
+## 🔹 9. Calculate the N-th value of the _Fibonacci Sequence_ recursively.
+
+### Answer
+
+👉🏼 Check out all 11 answers here: [Devinterview.io - Recursion](https://devinterview.io/data/recursion-interview-questions)
+
+---
+
+## 🔹 10. Calculate N-th _Fibonacci Number_ using _Tail Recursion_.
+
+### Answer
+
+👉🏼 Check out all 11 answers here: [Devinterview.io - Recursion](https://devinterview.io/data/recursion-interview-questions)
+
+---
+
+## 🔹 11. _Sort_ a _Stack_ using _Recursion_.
+
+### Answer
+
+👉🏼 Check out all 11 answers here: [Devinterview.io - Recursion](https://devinterview.io/data/recursion-interview-questions)
+
+---
+
