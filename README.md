@@ -4,7 +4,7 @@
 
 Check out our carefully selected list of **basic** and **advanced** Recursion questions and answers to be well-prepared for your tech interviews in 2024.
 
-![Recursion Decorative Image](https://storage.googleapis.com/dev-stack-app.appspot.com/blogImg/recursion.png?GoogleAccessId=firebase-adminsdk-bgeaf%40dev-stack-app.iam.gserviceaccount.com&Expires=1698606465&Signature=FbapYVaKQLw7KDR2pDx3tmwjDzyPXgjrMNASbP5KpKGWTTbYYwk778N1gaqaEQrtYc5%2BfpVvrhUysbUJBNOAf0yibtRcG9LHg62YOkTV%2F9BBYkIBv1YwzRUB%2BlC6q81arvaoOutWn%2FV9sUFqkKLQxiDj8jUyuI3%2B6j9trmzW4U4PT8RP4Mh7sr%2FqiDbD1KwIuwR5TZbRWDTQr3ck1dMPDAQ6sH4HkTvb7L8v8eL6HAj15vfpAdl%2FElN5lsqoNTr4sMyEZI%2FvdmxnyZJTduKUPPEZX5jE6S7lhGZtTVcx7w5odBKIx4UCgrxbOT4TcfyW%2BPAJRmBBbsKQUpsR5Ic9cw%3D%3D)
+![Recursion Decorative Image](https://firebasestorage.googleapis.com/v0/b/dev-stack-app.appspot.com/o/blogImg%2Frecursion.png?alt=media&token=e2448990-4cf1-41c3-a41f-ace7d8df1e59&_gl=1*1eyutua*_ga*OTYzMjY5NTkwLjE2ODg4NDM4Njg.*_ga_CW55HF8NVT*MTY5ODYwNTk1NS4xOTAuMS4xNjk4NjA3MDc4LjM0LjAuMA..)
 
 👉🏼 You can also find all answers here: [Devinterview.io - Recursion](https://devinterview.io/data/recursion-interview-questions)
 
